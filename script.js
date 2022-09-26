@@ -1,3 +1,9 @@
 var currentSlide = 1;
 
-// add an event listener to document.body here
+document.body.addEventListener("click", () => {
+  console.log("clicked")
+  console.log(currentSlide)
+  document.querySelector(".s-" + currentSlide).classList.add("hidden")
+  currentSlide = currentSlide + 1
+  document.querySelector(".s-" + currentSlide).classList.remove("hidden")
+})
